@@ -28,6 +28,7 @@ const OppositionSection: React.FC = () => {
         התנגדות למסוף האוטובוסים בנחלת עדה
       </h2>
 
+      {/* Images Section */}
       <h3 className="text-xl font-semibold mb-4">תמונות מהשכונה</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {images.map((src, index) => (
@@ -35,14 +36,15 @@ const OppositionSection: React.FC = () => {
             <img
               src={src}
               alt={`Opposition ${index + 1}`}
-              className="w-full h-auto"
+              className="w-full h-auto object-cover"
             />
           </div>
         ))}
       </div>
 
+      {/* Videos Section */}
       <h3 className="text-xl font-semibold mb-4">סרטונים מהמאבק</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {videoEmbedUrls.map((embedUrl, index) => (
           <div
             key={index}
@@ -53,8 +55,6 @@ const OppositionSection: React.FC = () => {
               width="100%"
               height="300"
               style={{ border: 'none', overflow: 'hidden' }}
-              scrolling="no"
-              frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               allowFullScreen
               title={`Facebook Video ${index + 1}`}
