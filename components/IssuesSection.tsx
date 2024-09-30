@@ -4,7 +4,8 @@ const IssuesSection: React.FC = () => (
   <section id="issues" className="my-8 p-6 bg-gray-100 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4">הבעיות</h2>
     <p className="mb-4">
-      קו 33 מביא לבעיות רבות בשכונתנו, כולל רעש, סיכון בטיחותי, וזיהום אוויר עקב המעבר ברחובות הצרים.
+      קו 33 מביא לבעיות רבות בשכונתנו, כולל רעש, סיכון בטיחותי, וזיהום אוויר עקב
+      המעבר ברחובות הצרים.
     </p>
 
     {/* Images and Video Section */}
