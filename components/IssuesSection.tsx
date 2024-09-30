@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const IssuesSection: React.FC = () => (
   <section id="issues" className="my-8 p-6 bg-gray-100 rounded-lg shadow-md">
@@ -10,13 +11,13 @@ const IssuesSection: React.FC = () => (
 
     {/* Images and Video Section */}
     <div className="media-content mb-8">
-      <img
-        src="/images/bus_small_street.jpg"
-        alt="אוטובוס ברחוב צר"
+      <Image
+        src="/images/image4.png"
+        alt="שכונת עדה היא לא תחנה מרכזית"
         className="w-full mb-4 rounded-md shadow-md"
       />
       <video controls className="w-full rounded-md shadow-md">
-        <source src="/videos/bus_danger.mp4" type="video/mp4" />
+        <source src="/videos/video1.mp4" type="video/mp4" />
         הדפדפן שלך לא תומך בנגן וידאו.
       </video>
     </div>
