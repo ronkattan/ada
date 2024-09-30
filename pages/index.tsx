@@ -1,32 +1,40 @@
-import Head from 'next/head';
+import React from 'react';
+import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import IssuesSection from '../components/IssuesSection';
-import ImpactSection from '../components/ImpactSection';
-import CallToAction from '../components/CallToAction';
-import Navigation from '../components/Navigation';
+import MediaGallery from '../components/MediaGallery';
+import CommunityActionsSection from '../components/CommunityActionsSection';
+import PetitionSection from '../components/PetitionSection';
 import SocialLinks from '../components/SocialLinks';
-import OppositionSection from '../components/OppositionSection';
+import VideoSection from '../components/VideoSection'; // New Video Section
 
 const Home: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>נחלת עדה בסכנה - קו 33</title>
-        <meta
-          name="description"
-          content="מידע על הבעיות שנגרמות בעקבות קו 33 בשכונת נחלת עדה."
-        />
-      </Head>
+    <div>
+      {/* Navigation Bar */}
       <Navigation />
-      <div className="container max-w-4xl mx-auto p-4">
-        <Header />
-        <IssuesSection />
-        <ImpactSection />
-        <CallToAction />
-        <OppositionSection /> {/* New section for opposition content */}
-        <SocialLinks />
-      </div>
-    </>
+
+      {/* Header Section */}
+      <Header />
+
+      {/* Issues Section */}
+      <IssuesSection />
+
+      {/* Video Section */}
+      <VideoSection />
+
+      {/* Media Gallery Section */}
+      <MediaGallery />
+
+      {/* Community Actions Section */}
+      <CommunityActionsSection />
+
+      {/* Petition Section */}
+      <PetitionSection />
+
+      {/* Social Links Section */}
+      <SocialLinks />
+    </div>
   );
 };
 

@@ -10,9 +10,9 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="bg-blue-900 text-white p-4 fixed top-0 left-0 right-0 z-50 shadow-md">
-      <div className="container max-w-4xl mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center max-w-6xl px-4">
         {/* Logo or Home Link */}
-        <a href="#header" className="text-lg font-semibold hover:underline">
+        <a href="#header" className="text-xl font-semibold hover:underline">
           דף הבית
         </a>
 
@@ -24,28 +24,22 @@ const Navigation: React.FC = () => {
         </div>
 
         {/* Links for Desktop */}
-        <div className="hidden md:flex">
-          <a
-            href="#issues"
-            className="text-lg font-semibold hover:underline ml-6"
-          >
+        <div className="hidden md:flex space-x-8 space-x-reverse">
+          <a href="#issues" className="text-lg font-semibold hover:underline">
             הבעיות
           </a>
-          <a
-            href="#impact"
-            className="text-lg font-semibold hover:underline ml-6"
-          >
+          <a href="#impact" className="text-lg font-semibold hover:underline">
             השפעה
           </a>
           <a
             href="#call-to-action"
-            className="text-lg font-semibold hover:underline ml-6"
+            className="text-lg font-semibold hover:underline"
           >
             קריאה לפעולה
           </a>
           <a
             href="#opposition"
-            className="text-lg font-semibold hover:underline ml-6"
+            className="text-lg font-semibold hover:underline"
           >
             התנגדות למסוף
           </a>
@@ -54,31 +48,31 @@ const Navigation: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-blue-900 text-white p-4 mt-4 rounded-lg shadow-lg">
+        <div className="md:hidden bg-blue-900 text-white p-4 mt-4 space-y-4">
           <a
             href="#issues"
-            className="block text-lg font-semibold hover:underline mb-2"
+            className="block text-lg font-semibold hover:underline"
             onClick={toggleMenu}
           >
             הבעיות
           </a>
           <a
             href="#impact"
-            className="block text-lg font-semibold hover:underline mb-2"
+            className="block text-lg font-semibold hover:underline"
             onClick={toggleMenu}
           >
             השפעה
           </a>
           <a
             href="#call-to-action"
-            className="block text-lg font-semibold hover:underline mb-2"
+            className="block text-lg font-semibold hover:underline"
             onClick={toggleMenu}
           >
             קריאה לפעולה
           </a>
           <a
             href="#opposition"
-            className="block text-lg font-semibold hover:underline mb-2"
+            className="block text-lg font-semibold hover:underline"
             onClick={toggleMenu}
           >
             התנגדות למסוף

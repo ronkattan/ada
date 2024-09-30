@@ -1,41 +1,49 @@
 import React from 'react';
-import { FaFacebook, FaWhatsapp, FaDonate } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp, FaHandHoldingUsd } from 'react-icons/fa';
 
-const SocialLinks: React.FC = () => (
-  <div className="my-8 p-6 bg-blue-50 rounded-lg shadow-md">
-    <h2 className="text-2xl font-semibold mb-4">הצטרפו ותמכו במאבק שלנו</h2>
-    <div className="flex flex-wrap gap-4">
-      <a
-        href="https://www.facebook.com/groups/2736214253220531/?utm_source=facebook&utm_medium=social&utm_campaign=save_our_neighborhood"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-      >
-        <FaFacebook className="mr-2" />
-        קבוצת פייסבוק
-      </a>
+const SocialLinks: React.FC = () => {
+  return (
+    <section
+      id="social-links"
+      className="my-8 p-6 bg-blue-100 rounded-lg shadow-md text-center"
+    >
+      <h2 className="text-2xl font-semibold mb-6">קישורים חשובים</h2>
+      <div className="flex justify-center items-center space-x-8 space-x-reverse">
+        {/* Support Donation */}
+        <a
+          href="https://payboxapp.page.link/jnJaSsTeR5yC2jix9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-600 hover:text-yellow-800 flex flex-col items-center"
+        >
+          <FaHandHoldingUsd size={36} />
+          <span className="mt-2">תמכו בנו</span>
+        </a>
 
-      <a
-        href="https://chat.whatsapp.com/ECuDVTtztIrALAfXOc54jA/?utm_source=whatsapp&utm_medium=social&utm_campaign=save_our_neighborhood"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
-      >
-        <FaWhatsapp className="mr-2" />
-        קבוצת וואטסאפ
-      </a>
+        {/* WhatsApp Group */}
+        <a
+          href="https://chat.whatsapp.com/ECuDVTtztIrALAfXOc54jA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-600 hover:text-green-800 flex flex-col items-center"
+        >
+          <FaWhatsapp size={36} />
+          <span className="mt-2">WhatsApp</span>
+        </a>
 
-      <a
-        href="https://payboxapp.page.link/jnJaSsTeR5yC2jix9/?utm_source=website&utm_medium=button&utm_campaign=save_our_neighborhood"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors"
-      >
-        <FaDonate className="mr-2" />
-        תמיכה במאבק
-      </a>
-    </div>
-  </div>
-);
+        {/* Facebook Group */}
+        <a
+          href="https://www.facebook.com/groups/2736214253220531"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 flex flex-col items-center"
+        >
+          <FaFacebook size={36} />
+          <span className="mt-2">Facebook</span>
+        </a>
+      </div>
+    </section>
+  );
+};
 
 export default SocialLinks;

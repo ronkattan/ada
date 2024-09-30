@@ -1,14 +1,33 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Header: React.FC = () => (
-  <header id="header" className="bg-blue-900 text-white text-center p-8 mt-16">
-    <h1 className="text-4xl font-bold mb-4">
-      נחלת עדה בסכנה: קו 33 מסכן את השכונה
-    </h1>
-    <p className="text-lg">
-      ברוכים הבאים לאתר שלנו, שבו אנו מציגים את הבעיות שנגרמות בעקבות פתיחת קו
-      33 בשכונת נחלת עדה בהרצליה.
-    </p>
+  <header
+    id="header"
+    className="relative w-full h-[70vh] text-white text-center overflow-hidden"
+  >
+    {/* Background Image */}
+    <div className="absolute inset-0 overflow-hidden">
+      <Image
+        src="/images/image2.png" // Use the new image for the background
+        alt="Nahalat Ada Protest"
+        layout="fill"
+        objectFit="cover"
+        quality={90}
+        className="opacity-80"
+      />
+    </div>
+
+    {/* Dark Overlay to Improve Text Visibility */}
+    <div className="absolute inset-0 bg-black opacity-50"></div>
+
+    {/* Text Content */}
+    <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+      <h1 className="text-6xl font-bold mb-4 text-shadow-lg">נחלת עדה בסכנה</h1>
+      <p className="text-3xl max-w-2xl text-shadow-lg">
+        שמים סוף להקמת המסוף בנחלת עדה!
+      </p>
+    </div>
   </header>
 );
 
